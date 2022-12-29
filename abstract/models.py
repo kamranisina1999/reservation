@@ -12,6 +12,7 @@ class AbstractRate(models.Model):
     class Meta:
         abstract = True
 
+
 class AbstractComment(models.Model):
     CREATED = 10
     APPROVED = 20
@@ -30,6 +31,17 @@ class AbstractComment(models.Model):
                                      )
     parent_comment = models.ForeignKey('self', on_delete=models.CASCADE)
     status = models.PositiveSmallIntegerField(choices=COMMENT_STATUS_CHOICES, default=CREATED)
+
+    class Meta:
+        abstract = True
+
+
+class AbstractHotelOrHotelRoomFeature(models.Model):
+    title = models.CharField(max_length=80)
+    is_active = models.BooleanField(default=False)
+
+    created_time = models.DateTimeField(auto_now_add=True)
+    modified_time = models.DateTimeField(auto_now=True)
 
     class Meta:
         abstract = True

@@ -4,6 +4,7 @@ from booking.reservation.models import *
 
 
 class UserCart(models.Model):
+    objects = None
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='user_cart')
     cart_number = models.PositiveIntegerField(editable=False, default=uuid.uuid4)
 

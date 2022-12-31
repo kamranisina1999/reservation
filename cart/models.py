@@ -1,6 +1,6 @@
 from django.db import models
 import uuid
-from booking.reservation.models import *
+from reservation.models import *
 
 
 class UserCart(models.Model):

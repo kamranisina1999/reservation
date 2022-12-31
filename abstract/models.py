@@ -1,6 +1,6 @@
 from django.core.validators import RegexValidator, MinValueValidator, MaxValueValidator
 from django.db import models
-from booking.booking import settings
+from booking import settings
 
 
 class AbstractRate(models.Model):

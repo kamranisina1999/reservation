@@ -1,5 +1,5 @@
 from django.db import models
-from booking.air.models import *
+from air.models import *
 
 
 class Flight(models.Model):

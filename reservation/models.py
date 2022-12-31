@@ -1,8 +1,8 @@
 from django.db import models
 
-from booking.users.models import User
-from booking.residence.models import HotelRoom, Residential
-from booking.flight.models import FlightTicket
+from users.models import User
+from residence.models import HotelRoom, Residential
+from flight.models import FlightTicket
 
 
 class HotelRoomReservation(models.Model):

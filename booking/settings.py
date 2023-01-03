@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-kvh$-#2xnx^2yq61asyo#@)bv$bq&72_gzz!aky74mle(z4h8d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'residence',
     'users',
     'booking',
+    'rest_framework',
+    'abstract',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+INTERNAL_IPS = ["127.0.0.1"]
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 

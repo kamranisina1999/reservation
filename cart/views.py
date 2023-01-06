@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from booking.abstract.permissions import IsOwner
+from abstract.permissions import IsOwner
 from .serializers import UserCartSerializer
 from .models import UserCart
 from rest_framework.generics import RetrieveAPIView

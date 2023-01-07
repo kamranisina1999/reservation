@@ -6,7 +6,7 @@ from .models import *
 class AirlineSerializer(ModelSerializer):
     class Meta:
         model = Airline
-        fields = ['name', 'origin_country', 'about']
+        fields = ['name', 'origin_country', 'detail']
 
 
 class AirplaneSerializer(ModelSerializer):

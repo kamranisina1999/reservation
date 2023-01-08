@@ -1,7 +1,7 @@
 from django.db import models
-from booking.residence.models import *
-from booking.air.models import *
-from booking.abstract.models import AbstractComment
+from residence.models import *
+from air.models import *
+from abstract.models import AbstractComment
 
 
 class AirLineComment(AbstractComment):

@@ -1,3 +1,39 @@
-from django.shortcuts import render
+from rest_framework.generics import ListCreateAPIView
+from .serializers import *
+from abstract.permissions import *
 
-# Create your views here.
+
+class HotelRateDisplay(ListCreateAPIView):
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = HotelRateSerializer
+
+    def get_queryset(self):
+        name = self.kwargs['hotel']
+        return HotelRate.objects.filter(hotel__name=name).all()
+
+
+class HotelRoomRateDisplay(ListCreateAPIView):
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = HotelRoomRateSerializer
+
+    def get_queryset(self):
+        id = self.kwargs['hotel_room_id']
+        return HotelRoomRate.objects.filter(hotel_room__id=id).all()
+
+
+class ResidentialRateDisplay(ListCreateAPIView):
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = ResidentialRateSerializer
+
+    def get_queryset(self):
+        name = self.kwargs['residential']
+        return ResidentialRate.objects.filter(residential__name=name).all()
+
+
+class AirlineRateDisplay(ListCreateAPIView):
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = AirlineRateSerializer
+
+    def get_queryset(self):
+        name = self.kwargs['airline']
+        return AirlineRate.objects.filter(airline__name=name).all()

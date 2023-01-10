@@ -139,7 +139,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-booking/manage.py
 
 # Spyder project settings
 .spyderproject

@@ -9,7 +9,7 @@ class HotelRoomReservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     hotel_room = models.ForeignKey(HotelRoom, on_delete=models.DO_NOTHING)
     number_of_guests = models.PositiveSmallIntegerField()
-
+    
     checkin = models.DateField(auto_now=True)
     checkout = models.DateField(auto_now=True)
     count_of_nights = models.PositiveIntegerField(default=1)

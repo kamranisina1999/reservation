@@ -9,7 +9,7 @@ class ResidentialCategoryAdmin(admin.ModelAdmin):
 
 
 class HotelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'star', 'country', 'state', 'city_or_section', 'phone_number', 'address',
+    list_display = ('name', 'star', 'country', 'state', 'city_or_section', 'address',
                     'number_of_rooms', 'floors', 'capacity', 'is_valid')
     list_filter = ('country', 'is_valid')
     search_fields = ('name', 'country', 'state', 'city_or_section', 'is_valid')
@@ -27,7 +27,7 @@ class HotelRoomAdmin(admin.ModelAdmin):
 
 
 class ResidentialAdmin(admin.ModelAdmin):
-    list_display = ('id', 'residential_category', 'name', 'country', 'state', 'city_or_section', 'phone_number',
+    list_display = ('id', 'residential_category', 'name', 'country', 'state', 'city_or_section',
                     'address', 'number_of_rooms', 'floors', 'capacity', 'price_per_night', 'is_valid')
     list_filter = ('residential_category', 'price_per_night', 'country', 'is_valid')
     search_fields = ('name', 'country', 'state', 'city_or_section', 'is_valid')

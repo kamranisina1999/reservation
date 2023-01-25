@@ -17,6 +17,7 @@ class HotelDisplay(ListAPIView):
     serializer_class = HotelSerializer
 
 
+
 class HotelRoomDisplay(ListAPIView):
     permission_classes = [AllowAny]
     queryset = HotelRoom.objects.all()

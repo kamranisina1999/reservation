@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from models import HotelRoomReservation, FlightTicketReservation, ResidentialReservation
+from .models import HotelRoomReservation, FlightTicketReservation, ResidentialReservation
 
 
 class HotelRoomReservationsSerializer(ModelSerializer):
